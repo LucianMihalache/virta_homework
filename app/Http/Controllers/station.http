@@ -1,0 +1,59 @@
+### Get stations from distance and coords
+POST http://127.0.0.1:8000/api/station/distance
+Content-Type: application/json
+Accept: application/json
+
+{
+    "distance": 5,
+    "latitude": 44.502758,
+    "longitude": 25.989187,
+    "company_id": 2
+}
+
+### Get station details
+GET http://127.0.0.1:8000/api/station
+Accept: application/json
+
+### Create new station
+POST http://127.0.0.1:8000/api/station
+Content-Type: application/json
+Accept: application/json
+
+{
+    "company_id": 3,
+    "name": "test",
+    "latitude": 12.12312,
+    "longitude": 12.12312,
+    "address": "test"
+}
+
+### Get station details
+GET http://127.0.0.1:8000/api/station/20
+Accept: application/json
+
+### Partial Update station
+PATCH http://127.0.0.1:8000/api/station/20
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "la?"
+}
+
+### Update station
+PUT http://127.0.0.1:8000/api/station/20
+Content-Type: application/json
+Accept: application/json
+
+{
+    "company_id": 3,
+    "name": "test",
+    "latitude": 12.12312,
+    "longitude": 12.12312,
+    "address": "test"
+}
+
+### Delete station
+DELETE http://127.0.0.1:8000/api/station/20
+Content-Type: application/json
+Accept: application/json

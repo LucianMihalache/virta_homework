@@ -1,0 +1,41 @@
+### Get company list
+GET http://127.0.0.1:8000/api/company
+Accept: application/json
+
+### Create new company
+POST http://127.0.0.1:8000/api/company
+Content-Type: application/json
+Accept: application/json
+
+{
+    "parent_company_id": 1,
+    "name": "test"
+}
+
+### Get company details
+GET http://127.0.0.1:8000/api/company/2
+Accept: application/json
+
+### Partial Update company
+PATCH http://127.0.0.1:8000/api/company/6
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "la?"
+}
+
+### Update company
+PUT http://127.0.0.1:8000/api/company/6
+Content-Type: application/json
+Accept: application/json
+
+{
+    "parent_company_id": 2,
+    "name": "la?"
+}
+
+### Delete company
+DELETE http://127.0.0.1:8000/api/company/8
+Content-Type: application/json
+Accept: application/json
